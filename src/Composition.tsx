@@ -11,7 +11,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import "@fontsource/roboto/700.css";
-import "@fontsource/tinos/700-italic.css";
+import "@fontsource/tinos/400-italic.css";
 
 // Measured reference keyframes in a 720 x 1280 design space.
 const ease = Easing.bezier(0.22, 1, 0.36, 1);
@@ -89,8 +89,8 @@ const Background: React.FC<{ t: number }> = ({ t }) => (
         width="430"
         height="810"
         fill="url(#grid)"
-        mask="url(#gridFade)"
-        opacity=".55"
+        transform={`translate(${tween(t, [5.55, 6.2], [0, -300])}, ${tween(t, [5.55, 6.2], [0, -100])})`}
+        opacity=".28"
       />
     </svg>
   </AbsoluteFill>
@@ -186,7 +186,7 @@ const Word: React.FC<{
       whiteSpace: "nowrap",
     }}
   >
-    ·{children}
+    · {children}
   </div>
 );
 
@@ -225,9 +225,9 @@ export const Mindset: React.FC = () => {
           top: tween(t, [3.2, 3.9], [213, 227]),
           fontFamily: "Tinos",
           fontStyle: "italic",
-          fontWeight: 700,
-          fontSize: 88,
-          lineHeight: 1.08,
+          fontWeight: 400,
+          fontSize: 96,
+          lineHeight: 1.0,
           letterSpacing: -4,
           opacity: tween(t, [5.55, 5.88], [1, 0]),
         }}
@@ -246,12 +246,12 @@ export const Mindset: React.FC = () => {
         style={{
           position: "absolute",
           left: 306,
-          top: 798,
+          top: 789,
           fontFamily: "Tinos",
           fontStyle: "italic",
-          fontWeight: 700,
-          fontSize: 88,
-          lineHeight: 1.08,
+          fontWeight: 400,
+          fontSize: 96,
+          lineHeight: 1.0,
           letterSpacing: -4,
           opacity: tween(t, [9.4, 9.86], [1, 0.55]),
         }}
@@ -262,7 +262,7 @@ export const Mindset: React.FC = () => {
         <Word t={t} start={6.83}>
           Conscious
         </Word>
-        <Word t={t} start={7.82}>
+        <Word t={t} start={8.08}>
           Effortfull
         </Word>
       </div>
