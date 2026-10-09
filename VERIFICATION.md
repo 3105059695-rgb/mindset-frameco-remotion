@@ -10,3 +10,6 @@
 - Scope: technical validation and sampled visual comparison completed. No claim of exhaustive subjective A/V playback or pixel-perfect equivalence. Fonts, brain pose, background curve/grid and fine timing remain approximate.
 
 Source MP4 and secrets are outside the repository. Before publication the staged file set is scanned for bearer tokens, signed URL parameters and the source storage host.
+
+- GitHub repository visibility verified as PUBLIC; remote main commit matched local HEAD after push.
+- Binding REST API returned HTTP 200 with the expected recording_id and repository root URL. Sanitized response: docs/binding-result.json. No existing bindings were deleted.
